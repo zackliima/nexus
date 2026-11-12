@@ -1,0 +1,4 @@
+GSAP 3.13.0 e ScrollTrigger 3.13.0
+Copyright: titulares identificados nos cabeçalhos dos arquivos originais.
+Termos oficiais: https://gsap.com/standard-license/
+Os cabeçalhos de licença dos arquivos JavaScript foram preservados integralmente.
