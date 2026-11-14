@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080b12">
-  <meta name="description" content="Nexus: uma jornada interativa e documentada pelos circuitos, interfaces, web, dispositivos móveis e inteligência artificial.">
+  <meta name="description"
+    content="Nexus: uma jornada interativa e documentada pelos circuitos, interfaces, web, dispositivos móveis e inteligência artificial.">
   <title>Nexus — A história das nossas conexões</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
@@ -12,106 +14,372 @@
   <script defer src="vendor/ScrollTrigger.min.js"></script>
   <script defer src="js/main.js"></script>
 </head>
+
 <body>
-<a class="skip" href="#conteudo">Pular para a história</a>
-<div class="progress" aria-hidden="true"><span></span></div>
-<header class="header glass">
-  <a class="brand" href="#inicio" aria-label="Nexus, início"><img class="brand-symbol" src="assets/favicon.svg" width="26" height="26" alt=""> nexus<span class="brand-dot">.</span></a>
-  <nav aria-label="Navegação principal"><a href="#conteudo">A jornada <span>↗</span></a><a href="#fontes">Fontes <span>↗</span></a></nav>
-  <button id="motion" class="motion" aria-pressed="false" aria-label="Reduzir animações" hidden><span aria-hidden="true">Ⅱ</span><span class="motion-label">Pausar movimento</span></button>
-</header>
-<main>
-  <section class="hero" id="inicio" aria-labelledby="hero-title">
-    <div class="hero-grid" aria-hidden="true"></div>
-    <div class="hero-art" aria-hidden="true"><img class="orb-fallback" src="assets/orbita.svg" alt="" width="800" height="800"><div id="scene"></div></div>
-    <div class="hero-content wrap">
-      <p class="eyebrow"><span class="status-dot"></span> UM MUSEU DIGITAL SOBRE NÓS</p>
-      <h1 id="hero-title">Tudo começa<br>com uma<br><em>conexão.</em></h1>
-      <p class="hero-intro">Do primeiro transistor às máquinas que conversam.<br class="desktop-break"> Uma história de ideias que aproximaram mundos.</p>
-      <a class="button primary" href="#conteudo">Explorar a história <span aria-hidden="true">↓</span></a>
-    </div>
-    <div class="hero-bottom wrap"><span>1947 — HOJE</span><span>05 CAPÍTULOS · LEITURA INTERATIVA</span><span class="hero-coordinate">SINAL 001 / CONECTADO</span></div>
-    <span class="orbit-caption" aria-hidden="true">FIG. 00<br>UMA IDEIA NUNCA EXISTE SOZINHA</span>
-  </section>
-  <div class="chapter-nav-wrap">
-    <nav class="chapter-nav" aria-label="Capítulos da história">
-      <a href="#circuitos"><span>01</span> Circuitos</a><a href="#interfaces"><span>02</span> Interfaces</a><a href="#web"><span>03</span> Web</a><a href="#mobile"><span>04</span> Mobile</a><a href="#ia"><span>05</span> Inteligência</a>
-    </nav>
-  </div>
-  <section class="intro wrap" id="conteudo">
-    <p class="eyebrow reveal">ANTES DE DESLIZAR A TELA</p>
-    <h2 class="reveal">Houve um tempo em que<br>o futuro ocupava <em>uma sala.</em></h2>
-    <div class="intro-bottom"><p class="reveal">Hoje, uma mensagem atravessa continentes enquanto cabe na sua mão. Entre esses dois mundos, não houve um único salto: houve trabalho coletivo, escolhas de projeto e muitas formas novas de conectar pessoas e informação.</p><p class="small-note reveal">Esta é uma seleção de cinco mudanças.<br>Uma porta de entrada, não uma história completa da computação.</p></div>
-  </section>
-  <section class="chapter wrap" id="circuitos" data-chapter="01">
-    <div class="chapter-head"><span class="eyebrow">01 / A MATÉRIA</span><span class="date">1947 → 1971</span></div>
-    <div class="chapter-grid">
-      <div class="copy"><p class="kicker reveal">UMA REVOLUÇÃO EM MINIATURA</p><h2 class="reveal">Menor por fora.<br><em>Maior por dentro.</em></h2>
-      <p class="lead reveal">Antes de conectar o mundo, foi preciso aprender a controlar um sinal.</p>
-      <p>Em dezembro de 1947, John Bardeen e Walter Brattain conseguiram amplificar um sinal com um dispositivo de germânio nos Bell Labs. A equipe, organizada por William Shockley, procurava alternativas às válvulas e aos interruptores eletromecânicos. O transistor foi anunciado publicamente em 1948. <a class="cite" href="#fonte-1">[1]</a></p>
-      <p>A mudança seguinte foi reunir componentes no mesmo circuito. Os trabalhos de Jack Kilby, em 1958, e Robert Noyce, em 1959, marcam etapas distintas dessa trajetória. Em 1971, o microprocessador comercial colocou funções de processamento em um chip. A miniaturização abriu espaço para computadores em novos lugares. <a class="cite" href="#fonte-2">[2]</a></p>
-      <details><summary>Por que um interruptor importa tanto?</summary><p>Em circuitos digitais, transistores podem atuar como chaves controladas eletricamente. Combinadas, essas chaves implementam operações lógicas. O exemplo ao lado representa apenas dois estados; não é uma simulação elétrica nem reproduz o transistor de 1947.</p></details>
+  <a class="skip" href="#conteudo">Pular para a história</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  
+  <header class="header glass">
+    <a class="brand" href="#inicio" aria-label="Nexus, início"><img class="brand-symbol" src="assets/favicon.svg"
+        width="26" height="26" alt=""> nexus<span class="brand-dot">.</span></a>
+    <nav aria-label="Navegação principal"><a href="#conteudo">A jornada <span>↗</span></a><a href="#fontes">Fontes
+        <span>↗</span></a></nav>
+    <button id="motion" class="motion" aria-pressed="false" aria-label="Reduzir animações" hidden><span
+        aria-hidden="true">Ⅱ</span><span class="motion-label">Pausar movimento</span></button>
+  </header>
+  
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-art" aria-hidden="true"><img class="orb-fallback" src="assets/orbita.svg" alt="" width="800"
+          height="800">
+        <div id="scene"></div>
       </div>
-      <div class="visual circuit-visual reveal"><div class="visual-top"><span>ESTUDO 01 — SINAL</span><span class="live-state">● ATIVO</span></div>
-        <svg class="circuit" viewBox="0 0 600 480" role="img" aria-label="Ilustração de um circuito com caminhos conectados a um chip central">
-          <defs><linearGradient id="chip" x2="1" y2="1"><stop stop-color="#31384f"/><stop offset="1" stop-color="#10121e"/></linearGradient><linearGradient id="signal-gradient"><stop stop-color="#64eddf"/><stop offset="1" stop-color="#b299ff"/></linearGradient></defs>
-          <g class="circuit-paths" fill="none" stroke="url(#signal-gradient)" stroke-width="1.5"><path d="M0 80H110L190 160H240V210"/><path d="M600 120H460L400 180H360V215"/><path d="M0 350H160L220 290H250"/><path d="M600 375H450L380 305H350"/><path d="M300 0V190"/><path d="M300 480V305"/><path d="M80 0V115L210 245H235"/><path d="M510 480V350L370 245H365"/><path d="M0 245H235"/><path d="M600 245H365"/></g>
-          <g fill="#8de8dc"><circle cx="110" cy="80" r="4"/><circle cx="460" cy="120" r="4"/><circle cx="160" cy="350" r="4"/><circle cx="450" cy="375" r="4"/></g>
-          <rect x="225" y="175" width="150" height="150" rx="23" fill="#0b0e17" stroke="#7c7799"/><rect x="242" y="192" width="116" height="116" rx="15" fill="url(#chip)" stroke="#9991c6"/>
-          <text id="bit" x="300" y="268" fill="#c5bbff" text-anchor="middle" font-size="62" font-family="monospace">1</text>
-        </svg>
-        <div class="visual-bottom"><span>DOIS ESTADOS. INÚMERAS COMBINAÇÕES.</span><button class="pill" id="signal" aria-pressed="true" hidden>Alterar sinal ↗</button></div>
+      <div class="hero-content wrap">
+        <p class="eyebrow"><span class="status-dot"></span> UM MUSEU DIGITAL SOBRE NÓS</p>
+        <h1 id="hero-title">Tudo começa<br>com uma<br><em>conexão.</em></h1>
+        <p class="hero-intro">Do primeiro transistor às máquinas que conversam.<br class="desktop-break"> Uma história
+          de ideias que aproximaram mundos.</p>
+        <a class="button primary" href="#conteudo">Explorar a história <span aria-hidden="true">↓</span></a>
       </div>
+      <div class="hero-bottom wrap"><span>1947 — HOJE</span><span>05 CAPÍTULOS · LEITURA INTERATIVA</span><span
+          class="hero-coordinate">SINAL 001 / CONECTADO</span></div>
+      <span class="orbit-caption" aria-hidden="true">FIG. 00<br>UMA IDEIA NUNCA EXISTE SOZINHA</span>
+    </section>
+    
+    <div class="chapter-nav-wrap">
+      <nav class="chapter-nav" aria-label="Capítulos da história">
+        <a href="#circuitos"><span>01</span> Circuitos</a><a href="#interfaces"><span>02</span> Interfaces</a><a
+          href="#web"><span>03</span> Web</a><a href="#mobile"><span>04</span> Mobile</a><a href="#ia"><span>05</span>
+          Inteligência</a>
+      </nav>
     </div>
-    <div class="milestones"><div><span>1947</span><p>Transistor de contato pontual</p></div><div><span>1958–59</span><p>Caminhos para o circuito integrado</p></div><div><span>1971</span><p>Microprocessador comercial</p></div></div>
-  </section>
-  <section class="chapter wrap" id="interfaces" data-chapter="02">
-    <div class="chapter-head"><span class="eyebrow">02 / O DIÁLOGO</span><span class="date">1968 →</span></div>
-    <div class="chapter-grid reverse">
-      <div class="copy"><p class="kicker reveal">DO COMANDO AO GESTO</p><h2 class="reveal">E se a máquina<br><em>nos entendesse?</em></h2>
-      <p class="lead reveal">A pergunta deixou de ser apenas o que um computador calcula. Passou a ser como podemos pensar com ele.</p>
-      <p>Em 9 de dezembro de 1968, Douglas Engelbart e sua equipe apresentaram o NLS em uma demonstração pública de 90 minutos. O mouse chamou atenção, mas fazia parte de uma ideia maior: navegar por informação, editar documentos e colaborar com outra pessoa a distância. <a class="cite" href="#fonte-3">[3]</a></p>
-      <p>A apresentação reuniu hipertexto, ligações entre arquivos e colaboração com áudio e vídeo. Não foi o lançamento de um computador doméstico. Foi uma demonstração de pesquisa que tornou visível outra relação com a máquina: interativa, conectada e orientada ao trabalho intelectual. <a class="cite" href="#fonte-3">[3]</a></p>
-      <details><summary>Uma interface muda a tarefa?</summary><p>Compare as duas representações ao lado. Um comando exige conhecer uma instrução; uma interface visual oferece uma ação reconhecível. Ambas podem abrir o mesmo documento. A diferença está no que a pessoa precisa lembrar e descobrir. Esta é uma demonstração didática, não uma reprodução do NLS.</p></details></div>
-      <div class="visual interface-visual reveal"><div class="visual-top"><span>ESTUDO 02 — INTERFACE</span><span>EXPERIMENTE</span></div>
-        <div class="mode-switch" role="group" aria-label="Tipo de interface"><button data-mode="terminal" aria-pressed="true">Comando</button><button data-mode="graphic" aria-pressed="false">Interface</button></div>
-        <div class="computer"><div class="computer-bar"><i></i><i></i><i></i><span>nexus / arquivo</span></div><div id="terminal-view"><span class="terminal-muted">NEXUS OS — demonstração</span><p>&gt; abrir historia.txt<span class="cursor">_</span></p><p class="terminal-result">Uma nova maneira<br>de pensar, juntos.</p></div><div id="graphic-view" hidden><div class="file-icon">▤</div><strong>historia.txt</strong><button id="open-file" class="pill">Abrir documento ↗</button><p id="file-result" hidden>Uma nova maneira de pensar, juntos.</p></div></div>
-        <div class="visual-bottom"><span>MESMA INTENÇÃO. OUTRA LINGUAGEM.</span></div>
+    
+    <section class="intro wrap" id="conteudo">
+      <p class="eyebrow reveal">ANTES DE DESLIZAR A TELA</p>
+      <h2 class="reveal">Houve um tempo em que<br>o futuro ocupava <em>uma sala.</em></h2>
+      <div class="intro-bottom">
+        <p class="reveal">Hoje, uma mensagem atravessa continentes enquanto cabe na sua mão. Entre esses dois mundos,
+          não houve um único salto: houve trabalho coletivo, escolhas de projeto e muitas formas novas de conectar
+          pessoas e informação.</p>
+        <p class="small-note reveal">Esta é uma seleção de cinco mudanças.<br>Uma porta de entrada, não uma história
+          completa da computação.</p>
       </div>
-    </div>
-  </section>
-  <section class="web-section" id="web" data-chapter="03">
-    <div class="wrap"><div class="chapter-head"><span class="eyebrow">03 / A REDE</span><span class="date">1989 → 1993</span></div>
-      <div class="web-heading"><p class="kicker reveal">O CONHECIMENTO GANHA ENDEREÇO</p><h2 class="reveal">Uma ideia.<br><em>O mundo inteiro.</em></h2><p class="lead reveal">O poder da web estava na possibilidade de seguir uma conexão.</p></div>
-      <div class="web-grid"><div class="copy"><p>Tim Berners-Lee propôs a World Wide Web em 1989, no CERN, para facilitar a troca de informações entre cientistas. O primeiro site explicava o próprio projeto e era hospedado em seu computador NeXT. Em 30 de abril de 1993, o CERN colocou o software da web em domínio público. <a class="cite" href="#fonte-4">[4]</a></p><p>A internet é a infraestrutura que conecta redes. A web é um sistema de documentos e recursos ligados por endereços e hiperlinks, acessado sobre essa infraestrutura. A distinção importa: uma mensagem pode viajar pela internet sem ser uma página web.</p><a class="text-link" href="https://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank" rel="noopener noreferrer">Visitar a primeira página preservada ↗</a></div>
-      <figure class="archive reveal"><div class="archive-bar"><span class="status-dot"></span> hipertexto / documentos conectados</div><img src="assets/hipertexto.svg" alt="Ilustração original de uma página de hipertexto, com documentos conectados por links" width="1024" height="619" loading="lazy"><figcaption>ILUSTRAÇÃO ORIGINAL / Uma página de hipertexto. Não é uma captura histórica. <a href="#fonte-4">Fonte ↗</a></figcaption></figure></div>
-      <div class="network-strip" aria-hidden="true"><span>DOCUMENTO</span><svg viewBox="0 0 700 80"><path class="network-path" d="M0 40H180L230 10H450L500 40H700M180 40L230 70H450L500 40" fill="none" stroke="currentColor"/><circle cx="350" cy="10" r="5"/><circle cx="350" cy="70" r="5"/></svg><span>DESCOBERTA</span></div>
-    </div>
-  </section>
-  <section class="chapter wrap" id="mobile" data-chapter="04">
-    <div class="chapter-head"><span class="eyebrow">04 / A PROXIMIDADE</span><span class="date">2007 →</span></div>
-    <div class="chapter-grid"><div class="copy"><p class="kicker reveal">A INTERFACE VIRA UM TOQUE</p><h2 class="reveal">O mundo,<br><em>na sua mão.</em></h2><p class="lead reveal">A tela deixou de ser um lugar até onde íamos. Passou a acompanhar nossos passos.</p>
-    <p>Em janeiro de 2007, a Apple apresentou o iPhone como a combinação de telefone, reprodutor de música e dispositivo de comunicação pela internet. A tela multitoque permitia controlar funções com os dedos; o navegador, os mapas e o e-mail faziam parte da proposta. <a class="cite" href="#fonte-5">[5]</a></p><p>Esse anúncio é um marco selecionado, não o início de toda a computação móvel. Ele ajuda a observar uma mudança de interface: parte dos controles físicos passa a ser desenhada por software. A mesma superfície pode mostrar um teclado, uma fotografia ou um mapa, conforme a tarefa.</p><details><summary>O que isso muda para quem cria sites?</summary><p>O dedo não tem a precisão de um cursor. Um botão precisa de espaço, a leitura deve caber em uma coluna e nenhuma informação essencial pode depender de hover. Neste site, o conteúdo vem primeiro; as composições se expandem quando a tela permite.</p></details></div>
-    <div class="visual phone-visual reveal"><div class="visual-top"><span>ESTUDO 04 — CONTEXTO</span><span>TOQUE PARA EXPLORAR</span></div><div class="phone"><div class="phone-notch"></div><div class="phone-time">09:41</div><p>Uma tela.<br><strong>Muitas possibilidades.</strong></p><div class="phone-card" id="phone-card" aria-live="polite"><span class="phone-glyph">◎</span><h3>Explore o caminho.</h3><p>Um mapa responde à sua localização e à sua intenção de chegar.</p></div><div class="phone-apps" role="group" aria-label="Conteúdo do telefone"><button data-app="mapa" aria-pressed="true" aria-label="Mostrar mapa">◎</button><button data-app="musica" aria-pressed="false" aria-label="Mostrar música">♫</button><button data-app="mensagem" aria-pressed="false" aria-label="Mostrar mensagem">✉</button></div></div><div class="visual-bottom"><span>INTERFACE CONCEITUAL / NÃO É UM PRODUTO REAL</span></div></div></div>
-  </section>
-  <section class="chapter ai-section wrap" id="ia" data-chapter="05">
-    <div class="chapter-head"><span class="eyebrow">05 / A LINGUAGEM</span><span class="date">2017 → EM ABERTO</span></div>
-    <div class="chapter-grid reverse"><div class="copy"><p class="kicker reveal">NOVAS CAPACIDADES, NOVAS PERGUNTAS</p><h2 class="reveal">Agora, podemos<br><em>conversar.</em></h2><p class="lead reveal">A linguagem se torna uma interface. A responsabilidade continua sendo humana.</p>
-    <p>Em 2017, o artigo <i>Attention Is All You Need</i> apresentou o Transformer: uma arquitetura baseada em mecanismos de atenção, sem as recorrências e convoluções usadas pelos modelos comparados no trabalho. Os experimentos principais eram de tradução automática. <a class="cite" href="#fonte-6">[6]</a></p><p>A atenção permite relacionar partes de uma sequência ao construir suas representações. O diagrama é uma analogia visual dessa relação, não uma visualização dos pesos de um modelo. O artigo não demonstrava consciência nem inaugurava toda a pesquisa em inteligência artificial.</p><p>Também não basta uma resposta parecer convincente. O perfil de IA generativa do NIST propõe considerar riscos durante o desenvolvimento, o uso e a avaliação desses sistemas. Conferir evidências e adequar o uso à tarefa continuam sendo parte do trabalho. <a class="cite" href="#fonte-7">[7]</a></p></div>
-    <div class="visual attention-visual reveal"><div class="visual-top"><span>ESTUDO 05 — RELAÇÕES</span><span>ILUSTRAÇÃO CONCEITUAL</span></div><svg viewBox="0 0 600 360" class="attention" role="img" aria-label="Palavras ligadas por arcos ilustram relações entre partes de uma frase"><defs><linearGradient id="attention-color"><stop stop-color="#66e4d9"/><stop offset="1" stop-color="#bca0ff"/></linearGradient></defs><g fill="none" stroke="url(#attention-color)" stroke-width="1.5"><path d="M80 280Q160 -70 450 280"/><path d="M80 280Q300 30 540 280"/><path d="M200 280Q300 70 450 280"/><path d="M300 280Q400 130 540 280"/><path d="M80 280Q80 130 200 280"/></g><g fill="#d5c9ff"><circle cx="80" cy="280" r="5"/><circle cx="200" cy="280" r="5"/><circle cx="300" cy="280" r="5"/><circle cx="450" cy="280" r="5"/><circle cx="540" cy="280" r="5"/></g><g fill="#e8e6f1" font-family="sans-serif" font-size="19" text-anchor="middle"><text x="80" y="320">Ideias</text><text x="200" y="320">conectam</text><text x="300" y="320">pessoas</text><text x="450" y="320">e</text><text x="540" y="320">mundos.</text></g></svg><div class="ai-note glass"><span>UMA PERGUNTA PARA LEVAR</span><p>Se a interface muda,<br>o que precisamos aprender?</p></div><div class="visual-bottom"><span>O PRÓXIMO CAPÍTULO AINDA ESTÁ SENDO ESCRITO.</span></div></div></div>
-  </section>
-  <section class="closing wrap"><p class="eyebrow reveal">DA MATÉRIA À LINGUAGEM</p><h2 class="reveal">A tecnologia muda.<br>A curiosidade <em>conecta.</em></h2><p>Cada interface carrega escolhas de quem a construiu.<br>Entender sua história é começar a escolher o que vem depois.</p><a href="#inicio" class="button">Recomeçar a jornada <span>↑</span></a></section>
-  <section class="sources wrap" id="fontes"><div class="sources-intro"><p class="eyebrow">O QUE SUSTENTA ESTA HISTÓRIA</p><h2>Explore as <em>fontes.</em></h2><p>Texto editorial original, baseado nas referências abaixo. Consulte os registros completos para aprofundar os temas. Pesquisa: novembro de 2026.</p></div><ol class="source-list">
-    <li id="fonte-1"><a href="https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/" target="_blank" rel="noopener noreferrer"><span>01</span><div><strong>Invention of the Point-Contact Transistor</strong><small>COMPUTER HISTORY MUSEUM · HISTÓRIA DO TRANSISTOR</small></div><b>↗</b></a></li>
-    <li id="fonte-2"><a href="https://www.computerhistory.org/siliconengine/timeline/" target="_blank" rel="noopener noreferrer"><span>02</span><div><strong>The Silicon Engine — Timeline</strong><small>COMPUTER HISTORY MUSEUM · CIRCUITOS E MICROPROCESSADORES</small></div><b>↗</b></a></li>
-    <li id="fonte-3"><a href="https://dougengelbart.org/mousesite/1968Demo.html" target="_blank" rel="noopener noreferrer"><span>03</span><div><strong>The 1968 Demo</strong><small>DOUG ENGELBART INSTITUTE · REGISTRO DA DEMONSTRAÇÃO</small></div><b>↗</b></a></li>
-    <li id="fonte-4"><a href="https://home.cern/science/computing/the-birth-of-the-web" target="_blank" rel="noopener noreferrer"><span>04</span><div><strong>The birth of the Web</strong><small>CERN · ORIGEM E ABERTURA DA WEB</small></div><b>↗</b></a></li>
-    <li id="fonte-5"><a href="https://www.apple.com/uk/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/" target="_blank" rel="noopener noreferrer"><span>05</span><div><strong>Apple Reinvents the Phone with iPhone</strong><small>APPLE · ANÚNCIO DE 9 DE JANEIRO DE 2007 · FONTE COMERCIAL</small></div><b>↗</b></a></li>
-    <li id="fonte-6"><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener noreferrer"><span>06</span><div><strong>Attention Is All You Need</strong><small>VASWANI ET AL. · ARTIGO CIENTÍFICO · 2017</small></div><b>↗</b></a></li>
-    <li id="fonte-7"><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence" target="_blank" rel="noopener noreferrer"><span>07</span><div><strong>Generative Artificial Intelligence Profile</strong><small>NIST · AI 600-1 · 2024</small></div><b>↗</b></a></li>
-  </ol></section>
-</main>
-<footer class="wrap"><a href="#inicio" class="brand">✳ nexus.</a><p>UM EXPERIMENTO SOBRE TECNOLOGIA E CONEXÕES.</p><a href="README.md">Sobre o projeto ↗</a></footer>
-<noscript><p class="noscript">A história está disponível sem JavaScript. As demonstrações interativas precisam dele para funcionar.</p></noscript>
+    </section>
+    
+    <section class="chapter wrap" id="circuitos" data-chapter="01">
+      <div class="chapter-head"><span class="eyebrow">01 / A MATÉRIA</span><span class="date">1947 → 1971</span></div>
+      <div class="chapter-grid">
+        <div class="copy">
+          <p class="kicker reveal">UMA REVOLUÇÃO EM MINIATURA</p>
+          <h2 class="reveal">Menor por fora.<br><em>Maior por dentro.</em></h2>
+          <p class="lead reveal">Antes de conectar o mundo, foi preciso aprender a controlar um sinal.</p>
+          <p>Em dezembro de 1947, John Bardeen e Walter Brattain conseguiram amplificar um sinal com um dispositivo de
+            germânio nos Bell Labs. A equipe, organizada por William Shockley, procurava alternativas às válvulas e aos
+            interruptores eletromecânicos. O transistor foi anunciado publicamente em 1948. <a class="cite"
+              href="#fonte-1">[1]</a></p>
+          <p>A mudança seguinte foi reunir componentes no mesmo circuito. Os trabalhos de Jack Kilby, em 1958, e Robert
+            Noyce, em 1959, marcam etapas distintas dessa trajetória. Em 1971, o microprocessador comercial colocou
+            funções de processamento em um chip. A miniaturização abriu espaço para computadores em novos lugares. <a
+              class="cite" href="#fonte-2">[2]</a></p>
+          <details>
+            <summary>Por que um interruptor importa tanto?</summary>
+            <p>Em circuitos digitais, transistores podem atuar como chaves controladas eletricamente. Combinadas, essas
+              chaves implementam operações lógicas. O exemplo ao lado representa apenas dois estados; não é uma
+              simulação elétrica nem reproduz o transistor de 1947.</p>
+          </details>
+        </div>
+        <div class="visual circuit-visual reveal">
+          <div class="visual-top"><span>ESTUDO 01 — SINAL</span><span class="live-state">● ATIVO</span></div>
+          <svg class="circuit" viewBox="0 0 600 480" role="img"
+            aria-label="Ilustração de um circuito com caminhos conectados a um chip central">
+            <defs>
+              <linearGradient id="chip" x2="1" y2="1">
+                <stop stop-color="#31384f" />
+                <stop offset="1" stop-color="#10121e" />
+              </linearGradient>
+              <linearGradient id="signal-gradient">
+                <stop stop-color="#64eddf" />
+                <stop offset="1" stop-color="#b299ff" />
+              </linearGradient>
+            </defs>
+            <g class="circuit-paths" fill="none" stroke="url(#signal-gradient)" stroke-width="1.5">
+              <path d="M0 80H110L190 160H240V210" />
+              <path d="M600 120H460L400 180H360V215" />
+              <path d="M0 350H160L220 290H250" />
+              <path d="M600 375H450L380 305H350" />
+              <path d="M300 0V190" />
+              <path d="M300 480V305" />
+              <path d="M80 0V115L210 245H235" />
+              <path d="M510 480V350L370 245H365" />
+              <path d="M0 245H235" />
+              <path d="M600 245H365" />
+            </g>
+            <g fill="#8de8dc">
+              <circle cx="110" cy="80" r="4" />
+              <circle cx="460" cy="120" r="4" />
+              <circle cx="160" cy="350" r="4" />
+              <circle cx="450" cy="375" r="4" />
+            </g>
+            <rect x="225" y="175" width="150" height="150" rx="23" fill="#0b0e17" stroke="#7c7799" />
+            <rect x="242" y="192" width="116" height="116" rx="15" fill="url(#chip)" stroke="#9991c6" />
+            <text id="bit" x="300" y="268" fill="#c5bbff" text-anchor="middle" font-size="62"
+              font-family="monospace">1</text>
+          </svg>
+          <div class="visual-bottom"><span>DOIS ESTADOS. INÚMERAS COMBINAÇÕES.</span><button class="pill" id="signal"
+              aria-pressed="true" hidden>Alterar sinal ↗</button></div>
+        </div>
+      </div>
+      <div class="milestones">
+        <div><span>1947</span>
+          <p>Transistor de contato pontual</p>
+        </div>
+        <div><span>1958–59</span>
+          <p>Caminhos para o circuito integrado</p>
+        </div>
+        <div><span>1971</span>
+          <p>Microprocessador comercial</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="chapter wrap" id="interfaces" data-chapter="02">
+      <div class="chapter-head"><span class="eyebrow">02 / O DIÁLOGO</span><span class="date">1968 →</span></div>
+      <div class="chapter-grid reverse">
+        <div class="copy">
+          <p class="kicker reveal">DO COMANDO AO GESTO</p>
+          <h2 class="reveal">E se a máquina<br><em>nos entendesse?</em></h2>
+          <p class="lead reveal">A pergunta deixou de ser apenas o que um computador calcula. Passou a ser como podemos
+            pensar com ele.</p>
+          <p>Em 9 de dezembro de 1968, Douglas Engelbart e sua equipe apresentaram o NLS em uma demonstração pública de
+            90 minutos. O mouse chamou atenção, mas fazia parte de uma ideia maior: navegar por informação, editar
+            documentos e colaborar com outra pessoa a distância. <a class="cite" href="#fonte-3">[3]</a></p>
+          <p>A apresentação reuniu hipertexto, ligações entre arquivos e colaboração com áudio e vídeo. Não foi o
+            lançamento de um computador doméstico. Foi uma demonstração de pesquisa que tornou visível outra relação com
+            a máquina: interativa, conectada e orientada ao trabalho intelectual. <a class="cite"
+              href="#fonte-3">[3]</a></p>
+          <details>
+            <summary>Uma interface muda a tarefa?</summary>
+            <p>Compare as duas representações ao lado. Um comando exige conhecer uma instrução; uma interface visual
+              oferece uma ação reconhecível. Ambas podem abrir o mesmo documento. A diferença está no que a pessoa
+              precisa lembrar e descobrir. Esta é uma demonstração didática, não uma reprodução do NLS.</p>
+          </details>
+        </div>
+        <div class="visual interface-visual reveal">
+          <div class="visual-top"><span>ESTUDO 02 — INTERFACE</span><span>EXPERIMENTE</span></div>
+          <div class="mode-switch" role="group" aria-label="Tipo de interface"><button data-mode="terminal"
+              aria-pressed="true">Comando</button><button data-mode="graphic" aria-pressed="false">Interface</button>
+          </div>
+          <div class="computer">
+            <div class="computer-bar"><i></i><i></i><i></i><span>nexus / arquivo</span></div>
+            <div id="terminal-view"><span class="terminal-muted">NEXUS OS — demonstração</span>
+              <p>&gt; abrir historia.txt<span class="cursor">_</span></p>
+              <p class="terminal-result">Uma nova maneira<br>de pensar, juntos.</p>
+            </div>
+            <div id="graphic-view" hidden>
+              <div class="file-icon">▤</div><strong>historia.txt</strong><button id="open-file" class="pill">Abrir
+                documento ↗</button>
+              <p id="file-result" hidden>Uma nova maneira de pensar, juntos.</p>
+            </div>
+          </div>
+          <div class="visual-bottom"><span>MESMA INTENÇÃO. OUTRA LINGUAGEM.</span></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="web-section" id="web" data-chapter="03">
+      <div class="wrap">
+        <div class="chapter-head"><span class="eyebrow">03 / A REDE</span><span class="date">1989 → 1993</span></div>
+        <div class="web-heading">
+          <p class="kicker reveal">O CONHECIMENTO GANHA ENDEREÇO</p>
+          <h2 class="reveal">Uma ideia.<br><em>O mundo inteiro.</em></h2>
+          <p class="lead reveal">O poder da web estava na possibilidade de seguir uma conexão.</p>
+        </div>
+        <div class="web-grid">
+          <div class="copy">
+            <p>Tim Berners-Lee propôs a World Wide Web em 1989, no CERN, para facilitar a troca de informações entre
+              cientistas. O primeiro site explicava o próprio projeto e era hospedado em seu computador NeXT. Em 30 de
+              abril de 1993, o CERN colocou o software da web em domínio público. <a class="cite"
+                href="#fonte-4">[4]</a></p>
+            <p>A internet é a infraestrutura que conecta redes. A web é um sistema de documentos e recursos ligados por
+              endereços e hiperlinks, acessado sobre essa infraestrutura. A distinção importa: uma mensagem pode viajar
+              pela internet sem ser uma página web.</p><a class="text-link"
+              href="https://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank"
+              rel="noopener noreferrer">Visitar a primeira página preservada ↗</a>
+          </div>
+          <figure class="archive reveal">
+            <div class="archive-bar"><span class="status-dot"></span> hipertexto / documentos conectados</div><img
+              src="assets/hipertexto.svg"
+              alt="Ilustração original de uma página de hipertexto, com documentos conectados por links" width="1024"
+              height="619" loading="lazy">
+            <figcaption>ILUSTRAÇÃO ORIGINAL / Uma página de hipertexto. Não é uma captura histórica. <a
+                href="#fonte-4">Fonte ↗</a></figcaption>
+          </figure>
+        </div>
+        <div class="network-strip" aria-hidden="true"><span>DOCUMENTO</span><svg viewBox="0 0 700 80">
+            <path class="network-path" d="M0 40H180L230 10H450L500 40H700M180 40L230 70H450L500 40" fill="none"
+              stroke="currentColor" />
+            <circle cx="350" cy="10" r="5" />
+            <circle cx="350" cy="70" r="5" />
+          </svg><span>DESCOBERTA</span></div>
+      </div>
+    </section>
+    
+    <section class="chapter wrap" id="mobile" data-chapter="04">
+      <div class="chapter-head"><span class="eyebrow">04 / A PROXIMIDADE</span><span class="date">2007 →</span></div>
+      <div class="chapter-grid">
+        <div class="copy">
+          <p class="kicker reveal">A INTERFACE VIRA UM TOQUE</p>
+          <h2 class="reveal">O mundo,<br><em>na sua mão.</em></h2>
+          <p class="lead reveal">A tela deixou de ser um lugar até onde íamos. Passou a acompanhar nossos passos.</p>
+          <p>Em janeiro de 2007, a Apple apresentou o iPhone como a combinação de telefone, reprodutor de música e
+            dispositivo de comunicação pela internet. A tela multitoque permitia controlar funções com os dedos; o
+            navegador, os mapas e o e-mail faziam parte da proposta. <a class="cite" href="#fonte-5">[5]</a></p>
+          <p>Esse anúncio é um marco selecionado, não o início de toda a computação móvel. Ele ajuda a observar uma
+            mudança de interface: parte dos controles físicos passa a ser desenhada por software. A mesma superfície
+            pode mostrar um teclado, uma fotografia ou um mapa, conforme a tarefa.</p>
+          <details>
+            <summary>O que isso muda para quem cria sites?</summary>
+            <p>O dedo não tem a precisão de um cursor. Um botão precisa de espaço, a leitura deve caber em uma coluna e
+              nenhuma informação essencial pode depender de hover. Neste site, o conteúdo vem primeiro; as composições
+              se expandem quando a tela permite.</p>
+          </details>
+        </div>
+        <div class="visual phone-visual reveal">
+          <div class="visual-top"><span>ESTUDO 04 — CONTEXTO</span><span>TOQUE PARA EXPLORAR</span></div>
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-time">09:41</div>
+            <p>Uma tela.<br><strong>Muitas possibilidades.</strong></p>
+            <div class="phone-card" id="phone-card" aria-live="polite"><span class="phone-glyph">◎</span>
+              <h3>Explore o caminho.</h3>
+              <p>Um mapa responde à sua localização e à sua intenção de chegar.</p>
+            </div>
+            <div class="phone-apps" role="group" aria-label="Conteúdo do telefone"><button data-app="mapa"
+                aria-pressed="true" aria-label="Mostrar mapa">◎</button><button data-app="musica" aria-pressed="false"
+                aria-label="Mostrar música">♫</button><button data-app="mensagem" aria-pressed="false"
+                aria-label="Mostrar mensagem">✉</button></div>
+          </div>
+          <div class="visual-bottom"><span>INTERFACE CONCEITUAL / NÃO É UM PRODUTO REAL</span></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="chapter ai-section wrap" id="ia" data-chapter="05">
+      <div class="chapter-head"><span class="eyebrow">05 / A LINGUAGEM</span><span class="date">2017 → EM ABERTO</span>
+      </div>
+      <div class="chapter-grid reverse">
+        <div class="copy">
+          <p class="kicker reveal">NOVAS CAPACIDADES, NOVAS PERGUNTAS</p>
+          <h2 class="reveal">Agora, podemos<br><em>conversar.</em></h2>
+          <p class="lead reveal">A linguagem se torna uma interface. A responsabilidade continua sendo humana.</p>
+          <p>Em 2017, o artigo <i>Attention Is All You Need</i> apresentou o Transformer: uma arquitetura baseada em
+            mecanismos de atenção, sem as recorrências e convoluções usadas pelos modelos comparados no trabalho. Os
+            experimentos principais eram de tradução automática. <a class="cite" href="#fonte-6">[6]</a></p>
+          <p>A atenção permite relacionar partes de uma sequência ao construir suas representações. O diagrama é uma
+            analogia visual dessa relação, não uma visualização dos pesos de um modelo. O artigo não demonstrava
+            consciência nem inaugurava toda a pesquisa em inteligência artificial.</p>
+          <p>Também não basta uma resposta parecer convincente. O perfil de IA generativa do NIST propõe considerar
+            riscos durante o desenvolvimento, o uso e a avaliação desses sistemas. Conferir evidências e adequar o uso à
+            tarefa continuam sendo parte do trabalho. <a class="cite" href="#fonte-7">[7]</a></p>
+        </div>
+        <div class="visual attention-visual reveal">
+          <div class="visual-top"><span>ESTUDO 05 — RELAÇÕES</span><span>ILUSTRAÇÃO CONCEITUAL</span></div><svg
+            viewBox="0 0 600 360" class="attention" role="img"
+            aria-label="Palavras ligadas por arcos ilustram relações entre partes de uma frase">
+            <defs>
+              <linearGradient id="attention-color">
+                <stop stop-color="#66e4d9" />
+                <stop offset="1" stop-color="#bca0ff" />
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#attention-color)" stroke-width="1.5">
+              <path d="M80 280Q160 -70 450 280" />
+              <path d="M80 280Q300 30 540 280" />
+              <path d="M200 280Q300 70 450 280" />
+              <path d="M300 280Q400 130 540 280" />
+              <path d="M80 280Q80 130 200 280" />
+            </g>
+            <g fill="#d5c9ff">
+              <circle cx="80" cy="280" r="5" />
+              <circle cx="200" cy="280" r="5" />
+              <circle cx="300" cy="280" r="5" />
+              <circle cx="450" cy="280" r="5" />
+              <circle cx="540" cy="280" r="5" />
+            </g>
+            <g fill="#e8e6f1" font-family="sans-serif" font-size="19" text-anchor="middle"><text x="80"
+                y="320">Ideias</text><text x="200" y="320">conectam</text><text x="300" y="320">pessoas</text><text
+                x="450" y="320">e</text><text x="540" y="320">mundos.</text></g>
+          </svg>
+          <div class="ai-note glass"><span>UMA PERGUNTA PARA LEVAR</span>
+            <p>Se a interface muda,<br>o que precisamos aprender?</p>
+          </div>
+          <div class="visual-bottom"><span>O PRÓXIMO CAPÍTULO AINDA ESTÁ SENDO ESCRITO.</span></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="closing wrap">
+      <p class="eyebrow reveal">DA MATÉRIA À LINGUAGEM</p>
+      <h2 class="reveal">A tecnologia muda.<br>A curiosidade <em>conecta.</em></h2>
+      <p>Cada interface carrega escolhas de quem a construiu.<br>Entender sua história é começar a escolher o que vem
+        depois.</p><a href="#inicio" class="button">Recomeçar a jornada <span>↑</span></a>
+    </section>
+    <section class="sources wrap" id="fontes">
+      <div class="sources-intro">
+        <p class="eyebrow">O QUE SUSTENTA ESTA HISTÓRIA</p>
+        <h2>Explore as <em>fontes.</em></h2>
+        <p>Texto editorial original, baseado nas referências abaixo. Consulte os registros completos para aprofundar os
+          temas. Pesquisa: novembro de 2026.</p>
+      </div>
+      <ol class="source-list">
+        <li id="fonte-1"><a
+            href="https://www.computerhistory.org/siliconengine/invention-of-the-point-contact-transistor/"
+            target="_blank" rel="noopener noreferrer"><span>01</span>
+            <div><strong>Invention of the Point-Contact Transistor</strong><small>COMPUTER HISTORY MUSEUM · HISTÓRIA DO
+                TRANSISTOR</small></div><b>↗</b>
+          </a></li>
+        <li id="fonte-2"><a href="https://www.computerhistory.org/siliconengine/timeline/" target="_blank"
+            rel="noopener noreferrer"><span>02</span>
+            <div><strong>The Silicon Engine — Timeline</strong><small>COMPUTER HISTORY MUSEUM · CIRCUITOS E
+                MICROPROCESSADORES</small></div><b>↗</b>
+          </a></li>
+        <li id="fonte-3"><a href="https://dougengelbart.org/mousesite/1968Demo.html" target="_blank"
+            rel="noopener noreferrer"><span>03</span>
+            <div><strong>The 1968 Demo</strong><small>DOUG ENGELBART INSTITUTE · REGISTRO DA DEMONSTRAÇÃO</small></div>
+            <b>↗</b>
+          </a></li>
+        <li id="fonte-4"><a href="https://home.cern/science/computing/the-birth-of-the-web" target="_blank"
+            rel="noopener noreferrer"><span>04</span>
+            <div><strong>The birth of the Web</strong><small>CERN · ORIGEM E ABERTURA DA WEB</small></div><b>↗</b>
+          </a></li>
+        <li id="fonte-5"><a href="https://www.apple.com/uk/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/"
+            target="_blank" rel="noopener noreferrer"><span>05</span>
+            <div><strong>Apple Reinvents the Phone with iPhone</strong><small>APPLE · ANÚNCIO DE 9 DE JANEIRO DE 2007 ·
+                FONTE COMERCIAL</small></div><b>↗</b>
+          </a></li>
+        <li id="fonte-6"><a href="https://arxiv.org/abs/1706.03762" target="_blank"
+            rel="noopener noreferrer"><span>06</span>
+            <div><strong>Attention Is All You Need</strong><small>VASWANI ET AL. · ARTIGO CIENTÍFICO · 2017</small>
+            </div><b>↗</b>
+          </a></li>
+        <li id="fonte-7"><a
+            href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+            target="_blank" rel="noopener noreferrer"><span>07</span>
+            <div><strong>Generative Artificial Intelligence Profile</strong><small>NIST · AI 600-1 · 2024</small></div>
+            <b>↗</b>
+          </a></li>
+      </ol>
+    </section>
+  </main>
+  
+  <footer class="wrap"><a href="#inicio" class="brand">✳ nexus.</a>
+    <p>UM EXPERIMENTO SOBRE TECNOLOGIA E CONEXÕES.</p><a href="README.md">Sobre o projeto ↗</a>
+  </footer>
+  
+  <noscript>
+    <p class="noscript">A história está disponível sem JavaScript. As demonstrações interativas precisam dele para
+      funcionar.</p>
+  </noscript>
 </body>
 </html>
